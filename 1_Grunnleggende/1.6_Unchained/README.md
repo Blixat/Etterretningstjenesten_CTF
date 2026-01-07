@@ -9,7 +9,7 @@ Koble til med SSH med passord: EnergiskSkjorte
 ssh support@unchained
 ```
 
-Vi får oppgitt et brukernavn og passord til SSH. Når vi logger inn, kan vi liste filene i start mappa:
+Vi får oppgitt et brukernavn og passord til SSH. Når vi logger inn, kan vi liste filene i start directory:
 
 ```
 unchained:~$ ls -al
