@@ -14,4 +14,4 @@ For å komme oss rundt dette kan vi endre litt på bildenavnet. I stedet for "Ne
 
 Mjau Mjau FLAGG FLAGG
 
-[](https://github.com/Blixat/Etterretningstjenesten_CTF/blob/main/2_Oppdrag/2.1_Pet_Gallery/neon_cyber_cat.png)
+![](https://github.com/Blixat/Etterretningstjenesten_CTF/blob/main/2_Oppdrag/2.1_Pet_Gallery/neon_cyber_cat.png)
