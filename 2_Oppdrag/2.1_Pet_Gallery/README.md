@@ -13,3 +13,5 @@ Vi skal prøve å få tilgang til "Neon Cyber Cat" -> Base64 -> "TmVvbiBDeWJlciB
 For å komme oss rundt dette kan vi endre litt på bildenavnet. I stedet for "Neon Cyber Cat" kan vi prøve "neon cyber cat" -> Base64 -> "bmVvbiBjeWJlciBjYXQ=" ≠ "DeW".
 
 Mjau Mjau FLAGG FLAGG
+
+[](https://github.com/Blixat/Etterretningstjenesten_CTF/blob/main/2_Oppdrag/2.1_Pet_Gallery/neon_cyber_cat.png)
