@@ -3,7 +3,8 @@
 Oppgave: 
 ```
 login@corax ~/2_Oppdrag/2.1_Trappetrinn $ cat LESMEG.md 
-Vi har avdekket en mulig bedrift som kan være knyttet til Utlandia, og har funnet et av passordene til en av de ansatte i en offentlig tilgjengelig, lekket database.
+Vi har avdekket en mulig bedrift som kan være knyttet til Utlandia, og har funnet et av passordene
+til en avde ansatte i en offentlig tilgjengelig, lekket database.
 Det er ditt oppdrag å innhente informasjon som avklarer om det foreligger en slik tilknytning eller ikke.
 Passordet er Bubbles2021
 
