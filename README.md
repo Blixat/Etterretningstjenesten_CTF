@@ -62,5 +62,5 @@ Jeg har ikke vært flink nok til å ta notater eller skjermbilder på alle oppga
 * [2.1_Pet_Gallery](https://github.com/Blixat/Etterretningstjenesten_CTF/blob/main/2_Oppdrag/2.1_Pet_Gallery/README.md)
 * [2.5_Eye_of_the_Tiger](https://github.com/Blixat/Etterretningstjenesten_CTF/blob/main/2_Oppdrag/2.5_Eye_of_the_Tiger/README.md) - kommer
 * [2.7_Trappetrinn](https://github.com/Blixat/Etterretningstjenesten_CTF/blob/main/2_Oppdrag/2.7_Trappetrinn/README.md)
-* [2.8_Flagle](https://github.com/Blixat/Etterretningstjenesten_CTF/blob/main/2_Oppdrag/2.8_Flagle/README.md) - kommer
+* [2.8_Flagle](https://github.com/Blixat/Etterretningstjenesten_CTF/blob/main/2_Oppdrag/2.8_Flagle/README.md)
 * [2.19_Kaffemaskin](https://github.com/Blixat/Etterretningstjenesten_CTF/blob/main/2_Oppdrag/2.19_Kaffemaskin/README.md) - kommer
