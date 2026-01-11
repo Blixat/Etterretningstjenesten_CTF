@@ -1,0 +1,290 @@
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Edit File</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <style>
+        .file-layout {
+            display: flex;
+            gap: 32px;
+            margin-top: 24px;
+            height: calc(100vh - 140px);
+        }
+
+        .file-menu {
+            width: 260px;
+            flex-shrink: 0;
+            background: var(--darkestdark);
+            border: 1px solid var(--darkhover);
+            border-radius: 10px;
+            padding: 16px 14px;
+        }
+
+        .file-menu-section {
+            margin-top: 12px;
+        }
+
+        .file-menu-section:first-of-type {
+            margin-top: 0;
+        }
+
+        .file-menu-section-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--light);
+            margin-bottom: 6px;
+        }
+
+        .file-menu-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .file-menu-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 10px;
+            border-radius: 6px;
+            background: var(--darkestdark);
+            border: 1px solid var(--darkhover);
+            color: var(--light);
+            font-size: 13px;
+        }
+
+        .file-menu-item:hover {
+            background: var(--darkhover);
+        }
+
+        .file-menu-name {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .file-menu-empty {
+            font-size: 12px;
+            opacity: 0.7;
+            margin-top: 2px;
+        }
+
+        .file-editor-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+        }
+
+        .editor-form {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            min-height: 0;
+        }
+
+        .editor {
+            flex: 1;
+            width: 100%;
+            box-sizing: border-box;
+            resize: none;
+        }
+
+        .editor-actions {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 12px;
+            gap: 8px;
+        }
+
+        .file-empty-state {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">Coffee machine</div>
+    <div class="layout">
+        <div class="left">
+            
+<style>
+    .menu {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu h1 {
+        font-size: 18px;
+        margin: 0 0 12px 0;
+        color: var(--light);
+    }
+
+    .menu a {
+        display: block;
+        padding: 8px;
+        border-radius: 6px;
+        color: var(--light);
+    }
+
+    .menu a:hover {
+        background: var(--darkhover)
+    }
+</style>
+
+<div class="menu">
+    <h1>Menu</h1>
+    <a href="/home">Home</a>
+    
+    <a href="/service">Service</a>
+    
+    <a href="/config">Config</a>
+    <a href="/file">Files</a>
+
+    <form method="post" action="/session/logout" style="margin-top:auto;">
+        <button class="btn" type="submit" style="width:100%;">
+            Logout
+        </button>
+    </form>
+
+    
+</div>
+
+        </div>
+
+        <div class="right">
+            
+
+            <div class="section" style="margin-top:24px; height:100%;">
+                <h2>Configuration files</h2>
+
+                <div class="file-layout">
+                    <div class="file-menu">
+                        
+                        <div class="file-menu-section">
+                            <div class="file-menu-section-label">User files</div>
+                            
+                            <div class="file-menu-list">
+                                
+                                <a href="/file/admin_pin.json" class="file-menu-item">
+                                    <span class="file-menu-name">admin_pin.json</span>
+                                </a>
+                                
+                                <a href="/file/brewer_settings.json" class="file-menu-item">
+                                    <span class="file-menu-name">brewer_settings.json</span>
+                                </a>
+                                
+                                <a href="/file/root_fangst.txt" class="file-menu-item">
+                                    <span class="file-menu-name">root_fangst.txt</span>
+                                </a>
+                                
+                                <a href="/file/server_source.zip" class="file-menu-item">
+                                    <span class="file-menu-name">server_source.zip</span>
+                                </a>
+                                
+                                <a href="/file/users.json" class="file-menu-item">
+                                    <span class="file-menu-name">users.json</span>
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+
+                        
+                        <div class="file-menu-section">
+                            <div class="file-menu-section-label">Admin files</div>
+                            
+                            <div class="file-menu-list">
+                                
+                                <a href="/file/hostname" class="file-menu-item">
+                                    <span class="file-menu-name">hostname</span>
+                                </a>
+                                
+                                <a href="/file/hosts" class="file-menu-item">
+                                    <span class="file-menu-name">hosts</span>
+                                </a>
+                                
+                                <a href="/file/issue" class="file-menu-item">
+                                    <span class="file-menu-name">issue</span>
+                                </a>
+                                
+                                <a href="/file/maintenance.json" class="file-menu-item">
+                                    <span class="file-menu-name">maintenance.json</span>
+                                </a>
+                                
+                                <a href="/file/motd" class="file-menu-item">
+                                    <span class="file-menu-name">motd</span>
+                                </a>
+                                
+                                <a href="/file/os-release" class="file-menu-item">
+                                    <span class="file-menu-name">os-release</span>
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                        
+                    </div>
+
+                    <div class="file-editor-container">
+                        
+                        <h3 style="margin-top:0;">Edit server_source.zip</h3>
+                        <form method="post" action="/file/server_source.zip" class="editor-form">
+                            <textarea name="content" class="editor">PK
+ï¿½ï¿½ï¿½ï¿½ï¿½PR’[9bj9ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½go.modUT	ï¿½øÔCiøÔCiuxï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½module machine
+
+go 1.24.6
+PK
+ï¿½ï¿½ï¿½ï¿½ï¿½PR’[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½scripts/UT	ï¿½øÔCiq&#39;Diuxï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½PK
+ï¿½ï¿½ï¿½ï¿½ï¿½PR’[y ³¼&#34;ï¿½ï¿½ï¿½&#34;ï¿½ï¿½ï¿½ï¿½ï¿½scripts/monthly_service.shUT	ï¿½øÔCiøÔCiuxï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½#!/bin/sh
+
+echo &#34;monthly service&#34;
+PK
+ï¿½ï¿½ï¿½ï¿½ï¿½PR’[»Õ!!ï¿½ï¿½ï¿½!ï¿½ï¿½ï¿½ï¿½ï¿½scripts/weekly_service.shUT	ï¿½øÔCiøÔCiuxï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½#!/bin/sh
+
+echo &#34;weekly service&#34;
+PK
+ï¿½ï¿½ï¿½ï¿½ï¿½PR’[b Ì ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½scripts/adhoc_service.shUT	ï¿½øÔCiøÔCiuxï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½#!/bin/sh
+
+echo &#34;adhoc service&#34;
+PK
+ï¿½ï¿½ï¿½ï¿½ï¿½PR’[¾ÙU ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½scripts/daily_service.shUT	ï¿½øÔCiøÔCiuxï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½#!/bin/sh
+
+echo &#34;daily service&#34;
+PKï¿½ï¿½ï¿½ï¿½IO“[µí9«ï¿½ï¿½*	ï¿½ï¿½	ï¿½ï¿½server.goUT	ï¿½º!Eiº!Eiuxï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½½VaO9ıÿÁ]	i·MœöT¥ÊhA îZÄr½ªª2»Nbec»¶—«øï73ŞM6®ıtÒf½3ï=Ï&lt;±¢˜Š±d3¡ôÎöÎ¶šYãKw¶·’Â-l0ÉêçÀ	]®½{Ñ}õñÛŞ~wånïåz—º0¥ÒãÁğrÿõúš•3ZÍ=&#43;3¦§–a0	ÁÒ‹ñôğÁA
+şÎPï­pÌ:u&#43;‚¼öñËå;FŒj]°Êˆrµœf,}ÙcÒ9ã2öHJ-°Ã!3_IQªJ¦É@X;hø8Ê[jD±Ï†L«Šï¿½¶œµÓøŞc°&#43;~‚à£4q€Ä¦rqÈvç	Q À=êÜº©L1í±oH
+Ğü½„òÈÅ4,Á†¿À3 ·dÁ0&#43;œ—ˆ³“_È¯V&#34;jryuşéèú„]œüD|Ê.—µÀvòK\»¼x—t*‘AzdØT“&#39;Å6§…?x\©^P“Ì”ªCªøÃ¶ÄÏ ê¿µ	Lhé­y8éğÅÄ–ï¿½–e{
+³Ö¾¶xx$u˜¬êîwØÉªÊ@p¿ô¤—îVæ…S6¤s†&gt;£yk´—9¤|èâ1“,ºşgîôæ	{±L}Â DGÒÓy%JŸUåâaï¿½é–jŞ„äA©ÙªTËòL„Ÿ °8x^ÏàÑš¾{5^ŠÇöåj¬ÑL¯n_í¥8_h?¸yÛ9œqœğüìĞ@|9üúï´ï¿FåqŠAvyÒ1N?äµÉ©U)ÄÆÏùm(Íx.Cš¼3@¦Cıï¿½*˜(•*DPFLdèC³¥ˆ£åaòç~7½ÿÑbšGm¼V£ÑÆ¬6ç½{y…9Ä‚(&amp;3øò–ì¢Á.ÃäE×9ù±_P2‡Úc=~×?ªÆÈÍî7DÌ “7i^|¼ÀÏßpYÕúgığ¨Ba*Èâü8ö¼Yÿ^KâùÇ4—ÇÂÀÅçS×†üyuZw“l£•n`z[&amp;ëî9eK°Á4Of‡Á&amp;ŸDUKyï¿½ÒØ—pü&amp;Î&amp;œšZ—H»Ù‹İéÑ#µá…Æ]tõáeHx³úUFr9§“ğG}·úÊc­OîÁ¦şƒHÌ9¿G;¬õ$Û˜fjW uPã¯w­©6j¢I‡EvĞm!ù?ÊBÓî³öjkF%ş®&lt;øÿH—„&amp;‡/ö@ÈËŞ&gt;ğß?¿Uéêz†¿PK
+ï¿½ï¿½ï¿½ï¿½ï¿½PR’[9bj9ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½´ï¿½ï¿½ï¿½ï¿½go.modUTï¿½øÔCiuxï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½PK
+ï¿½ï¿½ï¿½ï¿½ï¿½PR’[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½íAZï¿½ï¿½ï¿½scripts/UTï¿½øÔCiuxï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½PK
+ï¿½ï¿½ï¿½ï¿½ï¿½PR’[y ³¼&#34;ï¿½ï¿½ï¿½&#34;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½´œï¿½ï¿½ï¿½scripts/monthly_service.shUTï¿½øÔCiuxï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½PK
+ï¿½ï¿½ï¿½ï¿½ï¿½PR’[»Õ!!ï¿½ï¿½ï¿½!ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½´ï¿½ï¿½scripts/weekly_service.shUTï¿½øÔCiuxï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½PK
+ï¿½ï¿½ï¿½ï¿½ï¿½PR’[b Ì ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½´†ï¿½ï¿½scripts/adhoc_service.shUTï¿½øÔCiuxï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½PK
+ï¿½ï¿½ï¿½ï¿½ï¿½PR’[¾ÙU ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½´øï¿½ï¿½scripts/daily_service.shUTï¿½øÔCiuxï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½PKï¿½ï¿½ï¿½ï¿½IO“[µí9«ï¿½ï¿½*	ï¿½ï¿½	ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½´jï¿½ï¿½server.goUTï¿½º!Eiuxï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½PKï¿½ï¿½ï¿½ï¿½ï¿½ï¿½dï¿½ï¿½Xï¿½ï¿½ï¿½ï¿½</textarea>
+                            <div class="editor-actions">
+                                <a href="/file" class="btn btn-secondary">Cancel</a>
+                                <button class="btn" type="submit">Save file</button>
+                            </div>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
